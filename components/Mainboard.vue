@@ -12,6 +12,7 @@
               exact-active-class="active"
             >
               <div class="mainboard Main d-flex">
+                <div class="image-overlay"></div>
                 <!-- BOARD KIRI -->
                 <div class="col col-sm-6">
                   <div class="mainboard mainLeft">
@@ -42,33 +43,24 @@
                   </div>
                 </div>
                 <!-- BOARD KANAN -->
-                <div class="col-12 col-sm-6">
+                <div class="col-10 col-sm-6">
                   <div class="mainboard mainRight">
                     <div class="slider">
                       <Swiper
-                        :modules="[SwiperAutoplay, SwiperEffectFade]"
-                        :slides-per-view="3"
-                        :spaceBetween="30"
+                        :modules="[SwiperAutoplay]"
                         :centeredSlides="true"
                         :loop="true"
                         :allowTouchMove="false"
                         :speed="2000"
+                        :loopFillGroupWithBlank="true"
                         :breakpoints="{
-                          500: { slidesPerView: 2 },
-                          600: { slidesPerView: 3 },
+                          500: { slidesPerView: 2, spaceBetween: 10 },
+                          600: { slidesPerView: 3, spaceBetween: 60 },
                         }"
                         :autoplay="{
-                          delay: 1,
+                          delay: 0.5,
                           disableOnInteraction: false,
-                        }"
-                        :creative-effect="{
-                          prev: {
-                            shadow: false,
-                            translate: ['-20%', 0, -1],
-                          },
-                          next: {
-                            translate: ['100%', 0, 0],
-                          },
+                          reverseDirection: true,
                         }"
                       >
                         <swiper-slide
@@ -329,7 +321,7 @@ export default {
     }
   }
 }
-/* IZE TEKS MAINBOARD KIRI DAN KANAN */
+/* SIZE TEKS MAINBOARD KIRI DAN KANAN */
 
 /* SLIDE SECTION MAINBOARD KIRI */
 .slide-enter-active {
@@ -371,6 +363,7 @@ export default {
 /* SLIDE SECTION MAINBOARD KIRI END*/
 
 .mainLeft {
+  border-radius: unset;
   position: relative;
   background-color: rgb(15, 15, 15);
   display: flex;
@@ -417,6 +410,7 @@ export default {
 
 /* MAINBOARD UTAMA KANAN SWIPER */
 .mainRight {
+  border-radius: unset;
   position: relative;
   /* background-color: rgb(15, 15, 15); */
   display: flex;
@@ -430,12 +424,11 @@ export default {
 .slider img {
   pointer-events: none;
   width: 200px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 30px;
   height: 100%;
   object-position: center;
   object-fit: cover;
-  margin-right: 50px;
   box-sizing: border-box;
 }
 .slider {
@@ -472,6 +465,7 @@ export default {
   width: 20%;
   z-index: 10;
 }
+
 /* MAINBOARD UTAMA KIRI GRADIENT END*/
 
 /* MEDIA-QUERY */
@@ -485,7 +479,7 @@ export default {
   .mainLeft {
     position: absolute;
     background-color: unset;
-    z-index: 6;
+    z-index: 22;
   }
   .slider img {
     width: 200px;
@@ -496,7 +490,7 @@ export default {
   .mainRight {
     /* position: absolute; */
     background-color: unset;
-    z-index: 5;
+    z-index: 11;
   }
   .mainboardDown {
     align-items: center;
@@ -516,11 +510,25 @@ export default {
   .subtitleText {
     padding: 4rem 5rem 0 0;
     p {
-      color: #999;
-      text-align: justify;
-      font-size: 8px;
+      color: #cecece;
+      text-align: start;
+      font-size: 10px;
       font-weight: 500;
     }
+  }
+
+  .slider img {
+    pointer-events: none;
+    width: 180px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .image-overlay {
+    position: absolute;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 </style>
