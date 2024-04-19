@@ -54,8 +54,8 @@
                         :speed="2000"
                         :loopFillGroupWithBlank="true"
                         :breakpoints="{
-                          500: { slidesPerView: 2, spaceBetween: 10 },
-                          600: { slidesPerView: 3, spaceBetween: 60 },
+                          500: { slidesPerView: 3, spaceBetween: 0 },
+                          600: { slidesPerView: 3, spaceBetween: 40 },
                         }"
                         :autoplay="{
                           delay: 0.5,
@@ -380,12 +380,14 @@ export default {
   left: 79px;
   rotate: -30deg;
   -webkit-filter: blur(32px);
+  filter: blur(32px);
   transform-origin: 50% 50% 0px;
   width: 326px;
   height: 289px;
   overflow: hidden;
   z-index: 2;
-  scale: 1.1;
+  transform: scale(1);
+  filter: blur(32px);
   box-sizing: border-box;
   bottom: -172px;
   transition: 0.5s ease;
@@ -393,15 +395,15 @@ export default {
 .frame1:hover {
   position: absolute;
   opacity: 1;
-  transform: none;
+  transform: scale(1.1);
   -webkit-filter: blur(40px);
+  filter: blur(40px);
   transform-origin: 50% 50% 0px;
   width: 326px;
   height: 289px;
   overflow: hidden;
   z-index: 2;
   left: 0;
-  scale: 1;
   box-sizing: border-box;
   rotate: 0deg;
   transition: 0.5s ease;
@@ -499,7 +501,8 @@ export default {
   .frame1 {
     pointer-events: none;
     opacity: 1;
-    -webkit-filter: blur(28px);
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
     width: 60%;
     height: 100%;
     left: 0;
@@ -516,12 +519,24 @@ export default {
       font-weight: 500;
     }
   }
-
+  .slider {
+    /* background-color: tomato; */
+    width: 558px;
+    height: 150px;
+    z-index: 33;
+  }
   .slider img {
+    object-fit: cover;
+    box-sizing: border-box;
     pointer-events: none;
     width: 180px;
-    padding: 10px;
-    border-radius: 20px;
+    height: 120px;
+    padding: 0px;
+    padding-right: 0 !important;
+    border-radius: 5px;
+  }
+  .swiper {
+    padding: 15px;
   }
   .image-overlay {
     position: absolute;
