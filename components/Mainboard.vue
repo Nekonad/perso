@@ -501,9 +501,7 @@ export default {
   .frame1 {
     pointer-events: none;
     opacity: 1;
-    -webkit-filter: blur(40px);
-    -moz-filter: blur(40px);
-    -ms-filter: blur(40px);
+    transform: translate3d(0, 0, 0);
     filter: blur(40px);
     width: 60%;
     height: 100%;
@@ -537,7 +535,7 @@ export default {
     border-radius: 5px;
   }
   .swiper {
-    padding: 30px;
+    padding: 20px;
   }
   .image-overlay {
     position: absolute;
