@@ -379,7 +379,7 @@ export default {
   opacity: 0;
   left: 79px;
   rotate: -30deg;
-  filter: blur(32px);
+  -webkit-filter: blur(32px);
   transform-origin: 50% 50% 0px;
   width: 326px;
   height: 289px;
@@ -394,7 +394,7 @@ export default {
   position: absolute;
   opacity: 1;
   transform: none;
-  filter: blur(40px);
+  -webkit-filter: blur(40px);
   transform-origin: 50% 50% 0px;
   width: 326px;
   height: 289px;
@@ -499,7 +499,7 @@ export default {
   .frame1 {
     pointer-events: none;
     opacity: 1;
-    filter: blur(28px);
+    -webkit-filter: blur(28px);
     width: 60%;
     height: 100%;
     left: 0;
