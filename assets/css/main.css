@@ -1,0 +1,43 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  height: 200vh;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #080808;
+  /* overflow: none; */
+  /* min-height: 2000px; */
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+/* media querry
+
+/* ==================== Laptop ====================*/
+@media (min-width: 1024px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* ==================== tablet ====================  */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 100%;
+  }
+}
+/* mobile */
+@media (max-width: 767px) {
+  html {
+    font-size: 65%;
+  }
+}
