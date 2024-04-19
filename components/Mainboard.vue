@@ -54,7 +54,7 @@
                         :speed="2000"
                         :loopFillGroupWithBlank="true"
                         :breakpoints="{
-                          500: { slidesPerView: 3, spaceBetween: 0 },
+                          500: { slidesPerView: 2, spaceBetween: 2 },
                           600: { slidesPerView: 3, spaceBetween: 40 },
                         }"
                         :autoplay="{
@@ -501,8 +501,10 @@ export default {
   .frame1 {
     pointer-events: none;
     opacity: 1;
-    filter: blur(40px);
     -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+    -ms-filter: blur(40px);
+    filter: blur(40px);
     width: 60%;
     height: 100%;
     left: 0;
@@ -532,11 +534,10 @@ export default {
     width: 180px;
     height: 120px;
     padding: 0px;
-    padding-right: 0 !important;
     border-radius: 5px;
   }
   .swiper {
-    padding: 15px;
+    padding: 30px;
   }
   .image-overlay {
     position: absolute;
