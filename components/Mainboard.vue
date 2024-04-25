@@ -212,7 +212,11 @@ export default {
   padding: 1rem;
 }
 .Main:hover {
+  position: relative;
   border: 1px solid #202020;
+  z-index: 3;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* BOARD UTAMA END*/
@@ -392,7 +396,7 @@ export default {
   bottom: -172px;
   transition: 0.5s ease;
 }
-.frame1:hover {
+.Main:hover .frame1 {
   position: absolute;
   opacity: 1;
   transform: scale(1.1);
@@ -498,7 +502,7 @@ export default {
     align-items: center;
     flex-direction: column-reverse;
   }
-  .frame1 {
+  .Main .frame1 {
     pointer-events: none;
     opacity: 1;
     transform: translate3d(0, 0, 0);

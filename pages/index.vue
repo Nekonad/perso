@@ -40,7 +40,7 @@ export default {
   },
   mounted() {
     const obsOptions = {
-      threshold: 0.1,
+      threshold: 0,
     };
     this.observer = new IntersectionObserver(this.inViewport, obsOptions);
     // Slide UP
