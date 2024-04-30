@@ -91,7 +91,7 @@
         <!-- MAINBOARD BAWAH KIRI DAN KANAN -->
         <div
           class="mainboardDown row pt-0 pt-sm-2 d-flex justify-content-center"
-        >
+        > 
           <div class="col-10 col-sm-5 p-0 p-sm-2">
             <!-- MB BAWAH KIRI -->
             <div @click="togglGit = !togglGit" class="mainboard boardLeft">
